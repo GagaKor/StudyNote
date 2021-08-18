@@ -29,6 +29,50 @@ studyNote
  \- 틀을 안에서 일을 처리할 수 있게 하여 생산성을 높혀준다.
  \- 어떠한 규약을 지키면서 사용하여야 한다.
 
+#### java의 대표 Collection
+자바의 대표 Collection에는 List, Map, Set, Stack, Queue와 같은 것들이 있다.<br>
+이 추상화된 Collection에는 인터페이스 아래, 특정한 기법으로 구현된 자료구조가 들어간다.<br>
+예를 들어 List라는 인터페이스에는 구현법에 따라 ArrayList가 들어갈 수도, LinkedList가 들어갈 수도 있다.
+
+
+1. List(리스트)
+리스트는 배열과 비슷한 자바의 자료형으로 배열보다 편리한 기능을 많이 가지고 있다.<br>
+리스트에는 대표적으로 ArrayList와 LinkedList가 있다.
+
+    * ArrayList
+자바의 Vector를 개선한, 배열로 구현된 List이다.<br>
+배열과 같은 자료구조이기 때문에, 리스트 연산 수행시간 속도는 배열과 같다.
+
+    * LinkedList
+다음 노드의 주소를 기억하고 있는 List로, 배열에 비해 삽입과 삭제가 간단하다는 장점이 있다.<br>
+하지만 탐색의 경우에는 첫번째 노드부터 탐색해 나가야 하기 때문에 느리다는 단점이 있다.
+
+2. Map(맵)
+Map에는 HashMap, TreeMap, LinkedHashMap이 있다<br>
+    * HashMap은 일반적으로 사용하는 Map이다.
+      HahTable을 사용하여 Key값에 해시함수를 적용하여 나온 index에 value를 저장하는 식이다.
+      중복을 허용하지 않으며, 순서가 없다는 것이 특징이다.
+
+    * TreeMap은Red-Black Tree 자료구조를 이용한 Map이고 Tree 구조 이기 때문에 어느정도 순서를 보장한다.
+
+    * LinkedHashMap은 LinkedList로 구현된 HashMap이다. List로 구현되어있기 때문에 순서가 보장된다.
+    하지만 LinkedList 특성상 랜덤으로 접근해서 느릴 수 있다.
+
+3. Set(셋)
+Set에는 HashSet, TresSet, LinkedHashSet이 있다.
+
+      * HashSet은 HashMap에서 Key 값이 없는 자료형이고 집합이라고 생각해보 무방하다.
+        값이 포함되어 있는지 아닌지에만 관심이 있고 순서를 보장핮디 않으며, 중복값을 허용하지 않는다
+        Set중에서 가장 많이 사용된다.
+      * TreeSet은 Red-Black Tree 자료구조를 사용한 Set이다.
+      * LinkedHashSet은 LinkedList로 구현된 HashSet으로 순서를 보장한다.
+
+4. Array와 ArrayList
+     * Array는 길이에 대해서 Length 변수를 쓰고, ArrayList는 Size()메서드를 사용한다.
+     * Array는 크기가 고정되어있지만, ArrayList는 사이즈가 동적인 배열이다.
+     * Array는 int, byte, char 등과 같은 Primitive type과 Object 모두 담을 수 있지만 ArrayList는 Object만 담을 수 있다.
+5. Stack과 Queue
+     * 데이터를 기록하는 자료구조이며, Deque(덱)은 Stack과 Queue를 합친 형태이다. 
 ### 자료구조
 #### Stack 
 메모리 안 데이터들을 더 효율적으로 다루기 위해 만들어지 데이터 참조 방식 마지막에 들어온 데이터가 먼저 나간다.(LIFO)<br>
